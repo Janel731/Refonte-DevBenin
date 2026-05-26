@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f5f5f5;
+        margin: 0;
+      }
+
+      .container {
+        width: 700px;
+        height: 700px;
+        position: relative;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+      }
+
+      /* --- ANIMATIONS DES BLOCS ICÔNES --- */
+
+      /* Chaque icône flotte avec un décalage différent */
+      .float-1 {
+        animation: floatIcon 4s ease-in-out infinite;
+      }
+      .float-2 {
+        animation: floatIcon 4s ease-in-out infinite 1s;
+      }
+      .float-3 {
+        animation: floatIcon 4s ease-in-out infinite 2s;
+      }
+      .float-4 {
+        animation: floatIcon 4s ease-in-out infinite 3s;
+      }
+
+      @keyframes floatIcon {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      /* Effet de survol : l'icône grossit */
+      .icon-group:hover {
+        transform: scale(1.15) !important;
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      /* Ajout d'un effet "glow" subtil au survol */
+      .icon-group:hover rect {
+        stroke: white;
+        stroke-width: 2;
+      }
+
+      /* --- ANIMATION D'APPARITION --- */
+      .icon-group {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+      }
+      .icon-group:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .icon-group:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      .icon-group:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      .icon-group:nth-child(4) {
+        animation-delay: 0.8s;
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <svg viewBox="0 0 700 700">
+        <!-- --- CERCLES FIXES (à ajouter si vous ne les avez pas) --- -->
+        <circle
+          cx="350"
+          cy="350"
+          r="250"
+          fill="none"
+          stroke="#b0b8c1"
+          stroke-width="2"
+          opacity="0.5"
+        />
+        <circle
+          cx="350"
+          cy="350"
+          r="180"
+          fill="none"
+          stroke="#e0e4e8"
+          stroke-width="2"
+          opacity="0.5"
+        />
+        <circle
+          cx="350"
+          cy="350"
+          r="130"
+          fill="none"
+          stroke="#b0b8c1"
+          stroke-width="2"
+          opacity="0.5"
+        />
+
+        <!-- --- CENTRE (Logo et texte) --- -->
+        <g transform="translate(350, 350)">
+          <!-- Logo simulé -->
+          <circle
+            cx="0"
+            cy="0"
+            r="50"
+            fill="white"
+            stroke="#e0e4e8"
+            stroke-width="1"
+          />
+          <text x="0" y="5" text-anchor="middle" font-size="30">🌿</text>
+
+          <!-- Texte -->
+          <text
+            x="0"
+            y="70"
+            text-anchor="middle"
+            font-family="Arial, sans-serif"
+            font-size="24"
+            font-weight="bold"
+            fill="#1f2b4b"
+          >
+            +1K
+          </text>
+          <text
+            x="0"
+            y="95"
+            text-anchor="middle"
+            font-family="Arial, sans-serif"
+            font-size="18"
+            fill="#1f2b4b"
+          >
+            de devs connectés
+          </text>
+        </g>
+
+        <!-- --- BLOCS ICÔNES AVEC ANIMATION --- -->
+
+
+        <g class="icon-group float-1">
+          <g id="iconAcc">
+            <g id="Rectangle 7" filter="url(#filter1_dddddd_45_2)">
+              <rect
+                x="59.472"
+                y="476"
+                width="50"
+                height="50"
+                rx="10"
+                fill="#23C7C9"
+              />
+            </g>
+            <g id="acco">
+              <path
+                id="Vector"
+                d="M78.722 490C77.8608 490 77.0349 490.342 76.426 490.951C75.8171 491.56 75.475 492.386 75.475 493.247V498C75.475 498.518 75.463 498.844 75.303 499.164C75.15 499.469 74.802 499.871 73.887 500.329C73.7623 500.391 73.6574 500.487 73.5841 500.606C73.5108 500.724 73.472 500.861 73.472 501C73.472 501.139 73.5108 501.276 73.5841 501.394C73.6574 501.513 73.7623 501.609 73.887 501.671C74.799 502.127 75.132 502.521 75.287 502.872C75.462 503.272 75.475 503.742 75.475 504.565V508.753C75.475 509.614 75.8171 510.44 76.426 511.049C77.0349 511.658 77.8608 512 78.722 512C78.9209 512 79.1116 511.921 79.2523 511.78C79.3929 511.64 79.472 511.449 79.472 511.25C79.472 511.051 79.3929 510.86 79.2523 510.72C79.1116 510.579 78.9209 510.5 78.722 510.5C78.2586 510.5 77.8143 510.316 77.4866 509.988C77.159 509.661 76.975 509.216 76.975 508.753V504.493C76.975 503.77 76.975 502.987 76.66 502.269C76.449 501.788 76.118 501.374 75.646 501.002C76.109 500.643 76.432 500.258 76.644 499.836C76.975 499.175 76.974 498.52 76.974 498.041V493.247C76.974 492.282 77.757 491.5 78.722 491.5C78.9209 491.5 79.1116 491.421 79.2523 491.28C79.3929 491.14 79.472 490.949 79.472 490.75C79.472 490.551 79.3929 490.36 79.2523 490.22C79.1116 490.079 78.9209 490 78.722 490ZM91.222 490C92.0831 490 92.909 490.342 93.5179 490.951C94.1269 491.56 94.469 492.386 94.469 493.247V498C94.469 498.518 94.481 498.844 94.641 499.164C94.794 499.469 95.142 499.871 96.057 500.329C96.1816 500.391 96.2865 500.487 96.3598 500.606C96.4331 500.724 96.4719 500.861 96.4719 501C96.4719 501.139 96.4331 501.276 96.3598 501.394C96.2865 501.513 96.1816 501.609 96.057 501.671C95.145 502.127 94.812 502.521 94.657 502.872C94.482 503.272 94.469 503.742 94.469 504.565V508.753C94.469 509.179 94.385 509.602 94.2218 509.996C94.0586 510.39 93.8195 510.747 93.5179 511.049C93.2164 511.35 92.8585 511.59 92.4645 511.753C92.0706 511.916 91.6484 512 91.222 512C91.0231 512 90.8323 511.921 90.6916 511.78C90.551 511.64 90.472 511.449 90.472 511.25C90.472 511.051 90.551 510.86 90.6916 510.72C90.8323 510.579 91.0231 510.5 91.222 510.5C92.187 510.5 92.969 509.718 92.969 508.753V504.493C92.969 503.77 92.969 502.987 93.284 502.269C93.495 501.788 93.826 501.374 94.298 501.002C93.835 500.643 93.511 500.258 93.3 499.836C92.969 499.175 92.97 498.52 92.97 498.041V493.247C92.97 492.282 92.187 491.5 91.222 491.5C91.0231 491.5 90.8323 491.421 90.6916 491.28C90.551 491.14 90.472 490.949 90.472 490.75C90.472 490.551 90.551 490.36 90.6916 490.22C90.8323 490.079 91.0231 490 91.222 490Z"
+                fill="#FAFAF8"
+              />
+            </g>
+          </g>
+        </g>
+
+       
+        <g class="icon-group float-2">
+          <g id="iconGroup">
+            <g id="Rectangle 3" filter="url(#filter2_dddddd_45_2)">
+              <rect
+                x="254.472"
+                y="189"
+                width="50"
+                height="50"
+                rx="10"
+                fill="#D4541A"
+              />
+            </g>
+            <g id="Groupdev">
+              <g id="Vector_2" filter="url(#filter3_dddddd_45_2)">
+                <path
+                  d="M275.472 222C275.472 221.034 275.801 220.058 276.602 219.52C277.599 218.853 278.772 218.498 279.972 218.5C281.22 218.5 282.379 218.876 283.342 219.52C284.144 220.058 284.472 221.034 284.472 222"
+                  stroke="#FAFAF8"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <g id="Vector_3" filter="url(#filter4_dddddd_45_2)">
+                <path
+                  d="M279.972 216C281.353 216 282.472 214.881 282.472 213.5C282.472 212.119 281.353 211 279.972 211C278.591 211 277.472 212.119 277.472 213.5C277.472 214.881 278.591 216 279.972 216Z"
+                  stroke="#FAFAF8"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <g id="Vector_4" filter="url(#filter5_dddddd_45_2)">
+                <path
+                  d="M285.472 213.5C286.582 213.5 287.614 213.877 288.469 214.522C289.195 215.07 289.472 215.995 289.472 216.904V217"
+                  stroke="#FAFAF8"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <g id="Vector_5" filter="url(#filter6_dddddd_45_2)">
+                <path
+                  d="M285.472 211C286.577 211 287.472 210.105 287.472 209C287.472 207.895 286.577 207 285.472 207C284.367 207 283.472 207.895 283.472 209C283.472 210.105 284.367 211 285.472 211Z"
+                  stroke="#FAFAF8"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <g id="Vector_6" filter="url(#filter7_dddddd_45_2)">
+                <path
+                  d="M274.472 213.5C273.362 213.5 272.33 213.877 271.475 214.522C270.749 215.07 270.472 215.995 270.472 216.904V217"
+                  stroke="#FAFAF8"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <g id="Vector_7" filter="url(#filter8_dddddd_45_2)">
+                <path
+                  d="M274.472 211C275.577 211 276.472 210.105 276.472 209C276.472 207.895 275.577 207 274.472 207C273.367 207 272.472 207.895 272.472 209C272.472 210.105 273.367 211 274.472 211Z"
+                  stroke="#FAFAF8"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </g>
+          </g>
+        </g>
+
+   
+        <g class="icon-group float-3">
+          <g id="iconCode">
+            <g id="Rectangle 5" filter="url(#filter9_dddddd_45_2)">
+              <rect
+                x="555.472"
+                y="369"
+                width="50"
+                height="50"
+                rx="10"
+                fill="#678C24"
+              />
+              <rect
+                x="555.972"
+                y="369.5"
+                width="49"
+                height="49"
+                rx="9.5"
+                stroke="#678C24"
+              />
+            </g>
+            <g id="code">
+              <path
+                id="Vector_8"
+                d="M575.472 390L571.472 394L575.472 398M585.472 390L589.472 394L585.472 398M582.472 386L578.472 402"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </g>
+        </g>
+
+        
+        <g class="icon-group float-4">
+          <g id="iconePull">
+            <g id="Rectangle 6" filter="url(#filter10_dddddd_45_2)">
+              <rect
+                x="351.472"
+                y="634"
+                width="50"
+                height="50"
+                rx="10"
+                fill="#0F1F3D"
+              />
+            </g>
+            <g id="pull request">
+              <path
+                id="Vector_9"
+                d="M372.593 662.879C372.031 662.316 371.268 662 370.472 662C369.676 662 368.913 662.316 368.351 662.879C367.788 663.441 367.472 664.204 367.472 665C367.472 665.796 367.788 666.559 368.351 667.121C368.913 667.684 369.676 668 370.472 668C371.268 668 372.031 667.684 372.593 667.121C373.156 666.559 373.472 665.796 373.472 665C373.472 664.204 373.156 663.441 372.593 662.879Z"
+                stroke="#FAFAF8"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                id="Vector_10"
+                d="M382.472 656C381.676 656 380.913 655.684 380.351 655.121C379.788 654.559 379.472 653.796 379.472 653C379.472 652.204 379.788 651.441 380.351 650.879C380.913 650.316 381.676 650 382.472 650C383.268 650 384.031 650.316 384.593 650.879C385.156 651.441 385.472 652.204 385.472 653C385.472 653.796 385.156 654.559 384.593 655.121C384.031 655.684 383.268 656 382.472 656ZM382.472 656C382.472 658.387 381.524 660.676 379.836 662.364C378.148 664.052 375.859 665 373.472 665M370.472 662V650"
+                stroke="#FAFAF8"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>

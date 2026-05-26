@@ -1,0 +1,25 @@
+/* Animation flottante légère */
+#iconAcc {
+  animation: float 3s ease-in-out infinite;
+}
+
+#iconGroup {
+  animation: float 3s ease-in-out infinite 0.75s;
+}
+
+#iconCode {
+  animation: float 3s ease-in-out infinite 1.5s;
+}
+
+#iconePull {
+  animation: float 3s ease-in-out infinite 2.25s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
