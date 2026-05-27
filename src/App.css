@@ -23,3 +23,16 @@
     transform: translateY(-8px);
   }
 }
+
+
+/* Dégradé horizontal : Vert → Jaune → Rouge */
+.benin-flag-gradient {
+  fill: url(#benin-flag);
+  stroke: #333; /* contour (optionnel) */
+}
+
+/* Dégradé vertical si tu préfères */
+.benin-flag-vertical {
+  fill: url(#benin-flag-vertical);
+  stroke: #333;
+}

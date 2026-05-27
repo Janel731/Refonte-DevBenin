@@ -38,29 +38,29 @@ const Navbar = () => {
           {/* Dropdown 1 */}
           <div className="relative group">
             <button className="flex items-center gap-2 hover:text-blue-600 transition-colors">
-              Services
+              Communauté
               <ChevronDown size={18} />
             </button>
 
             <div className="absolute left-0 top-10 hidden w-72 rounded-xl border bg-white p-3 shadow-xl group-hover:block">
               <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
-                <h4 className="font-semibold">Création de site web</h4>
+                <h4 className="font-semibold">Membres</h4>
                 <p className="text-sm text-gray-500">
-                  Sites modernes et responsives
+                  Découvrez les développeurs talentueux du Bénin
                 </p>
               </a>
 
               <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
-                <h4 className="font-semibold">Landing Pages</h4>
+                <h4 className="font-semibold">Projets</h4>
                 <p className="text-sm text-gray-500">
-                  Pages optimisées pour convertir
+                  Participés à des projets open source innovant et collaborez avec la communauté
                 </p>
               </a>
 
               <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
-                <h4 className="font-semibold">UI/UX Design</h4>
+                <h4 className="font-semibold">Blog</h4>
                 <p className="text-sm text-gray-500">
-                  Interfaces modernes et intuitives
+                  Un espace dédié à l'innovation, l'apprentissage et le partage
                 </p>
               </a>
             </div>
@@ -75,29 +75,28 @@ const Navbar = () => {
 
             <div className="absolute left-0 top-10 hidden w-72 rounded-xl border bg-white p-3 shadow-xl group-hover:block">
               <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
-                <h4 className="font-semibold">Blog</h4>
-                <p className="text-sm text-gray-500">Astuces et conseils web</p>
+                <h4 className="font-semibold">Challenges</h4>
+                <p className="text-sm text-gray-500">Testez vos compétences avec des défis de quiz hebdomadaire</p>
               </a>
 
               <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
-                <h4 className="font-semibold">Documentation</h4>
+                <h4 className="font-semibold">Classement</h4>
                 <p className="text-sm text-gray-500">
-                  Guides et tutoriels complets
+                  Le top des développeurs béninois
                 </p>
               </a>
 
               <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
-                <h4 className="font-semibold">Support</h4>
+                <h4 className="font-semibold">Components</h4>
                 <p className="text-sm text-gray-500">
-                  Obtenir de l'aide rapidement
+                   Retrouver les composants partagés par les dévéloppeur membres
                 </p>
               </a>
+
+
             </div>
           </div>
 
-          <a href="#" className="hover:text-blue-600 transition-colors">
-            Tarifs
-          </a>
         </nav>
 
         {/* Buttons - Maintenant à partir de lg */}

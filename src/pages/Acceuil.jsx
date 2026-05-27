@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import React from "react";
+import About from "@/components/sections/About"
 const Acceuil = () => {
   return (
     <>
@@ -7,6 +8,7 @@ const Acceuil = () => {
 
    
       <Hero></Hero>
+      <About></About>
      </main>
     </>
   );
