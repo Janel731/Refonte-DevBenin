@@ -385,11 +385,11 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col lg:flex-row lg:justify-between lg:items-center px-4 md:px-8 gap-6 lg:gap-0 w-full max-w-7xl mx-auto">
         {/* Texte */}
         <div className="w-full lg:w-1/2 space-y-2 md:mt-70 lg:mt-0 text-center lg:text-left">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase leading-tight font-technor-bold">
             Construisons l'avenir{" "}
             <span className="block sm:inline">Tech du Bénin</span> ensemble
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground font-kalam-regular">
             Rejoignez la plus grande communauté de développeurs du Bénin.{" "}
             <br className="hidden sm:block" />
             <FlipWords words={["Apprenez", "Partagez"]} />
@@ -397,7 +397,7 @@ const Hero = () => {
             innovants.
           </p>
 
-          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 font-kalam-regular">
             <ShimmerButton>Mon espace</ShimmerButton>
             <ShimmerButton>Voir les projets</ShimmerButton>
           </div>

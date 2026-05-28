@@ -27,10 +27,10 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <div className="text-2xl font-bold">DevBenin</div>
+        <div className="text-2xl font-kalam-bold">DevBenin</div>
 
         {/* Desktop Menu - Maintenant à partir de lg (desktop) */}
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-8 lg:flex font-kalam-regular">
           <a href="#" className="hover:text-blue-600 transition-colors">
             Accueil
           </a>
@@ -100,7 +100,7 @@ const Navbar = () => {
         </nav>
 
         {/* Buttons - Maintenant à partir de lg */}
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 lg:flex font-kalam-regular">
           <ThemeToggle animation="circle" duration={600} origin="center" />
           <button className="rounded-lg border px-4 py-2 hover:bg-gray-100 transition-colors">
             Connexion
